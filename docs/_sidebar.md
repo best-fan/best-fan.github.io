@@ -1,6 +1,6 @@
 
 * Vue
-    - [v-mode](vue/v-mode.md) 
+    - [vue响应式原理](vue/v-mode.md) 
  
     
 * JavaScript
@@ -10,5 +10,5 @@
 * CSS
     - [布局](layout.md)
 
-* 其他
+* 工具 
     - [docsify 使用](other/docsify.md)
