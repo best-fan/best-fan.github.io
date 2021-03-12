@@ -42,7 +42,7 @@
     ```
     cd docs && python -m http.server 3000
     ```
-    
+
 通过运行 docsify serve 启动一个本地服务器，可以方便地实时预览效果。默认访问地址 http://localhost:3000 。
    
 ![预览图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d8bf3840bf4d9e93eeeadbba3b97f5~tplv-k3u1fbpfcp-zoom-1.image)
@@ -137,5 +137,5 @@
 ##  总结
 docsify使用起来非常方便,而且使用md语法、插件功能比较丰富，适合文件系统的搭建，并且支持git hub page的部署，非常轻便。更多功能，详细介绍，请访问[docsify官方地址](https://docsify.js.org/#/)。
 
-Page Update Time：{docsify-updated}
+<p align="right">Page Update Time：{docsify-updated}</p>
 
