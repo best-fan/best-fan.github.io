@@ -7,14 +7,14 @@
 
 ###  安装docsify-cli 工具
 
-    ```
+   ```
     npm i docsify-cli -g  
-    
-    ```
-    or
-    ```
+
+   ```
+   or
+   ```
     yarn global add docsify-cli 
-    ```
+   ```
 
 ### 初始化项目  
 在`./docs `文件夹中写文档， 通过init  初始化项目
@@ -27,24 +27,25 @@
     -   .nojekyll 用于阻止 GitHub Pages 忽略掉下划线开头的文件
 ### 启动项目
 
-	-  使用docsify启动
+-  使用docsify启动
     ```
     docsify serve docs
     ```
    	
-	-  使用 Python 启动
+-  使用 Python 启动
     
-    python 2.x
+  - python 2.x
     ```
     cd docs && python -m SimpleHTTPServer 3000
     ```
-    python 3.x
+  - python 3.x
     ```
     cd docs && python -m http.server 3000
     ```
-    通过运行 docsify serve 启动一个本地服务器，可以方便地实时预览效果。默认访问地址 http://localhost:3000 。
+    
+通过运行 docsify serve 启动一个本地服务器，可以方便地实时预览效果。默认访问地址 http://localhost:3000 。
    
-    ![预览图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d8bf3840bf4d9e93eeeadbba3b97f5~tplv-k3u1fbpfcp-zoom-1.image)
+![预览图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07d8bf3840bf4d9e93eeeadbba3b97f5~tplv-k3u1fbpfcp-zoom-1.image)
     
     
 
@@ -52,26 +53,26 @@
 
 ###     配置侧边栏
     
-    在 index.html 中，新增配置 loadSidebar: true
-    ```
+在 index.html 中，新增配置 loadSidebar: true
+   ```
     <script>
       window.$docsify = {
         loadSidebar: true
       }
     </script>
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    ```
-    创建 _sidebar.md 文件
+   ```
+创建 _sidebar.md 文件
     
-    ```
+   ```
     <!-- docs/_sidebar.md -->
 
     * [首页](zh-cn/)
     * [指南](zh-cn/guide)
-    ```
+   ```
 ###    自动生成二级标题
 
-	开启loadSidebar，并配置subMaxLevel
+开启loadSidebar，并配置subMaxLevel
   ```
   <!-- index.html -->
 
@@ -83,7 +84,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   ```
-	![预览图](http://blog.bravetimes.cn/api/public/uploads/2021/03/11/1615473232733519.png)
+![预览图](http://blog.bravetimes.cn/api/public/uploads/2021/03/11/1615473232733519.png)
   
 
 ##  docsify插件使用
@@ -101,6 +102,8 @@
  <!-- 全文搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 ```
+
+![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511492051529.png)
 ### 图片缩放
 
 ```
@@ -113,11 +116,15 @@
   <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 ```
+
+![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511534873758.png)
 ###  复制代码
 
 ```
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 ```
+
+![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511590341126.png)
 ###  在 Github 上编辑
 设置repo地址
 ```
@@ -125,6 +132,8 @@
  	repo: 'https://github.com//best-fan/best-fan.github.io/',
  }
 ```
+
+![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511717027562.png)
 ##  总结
 docsify使用起来非常方便,而且使用md语法、插件功能比较丰富，适合文件系统的搭建，并且支持git hub page的部署，非常轻便。更多功能，详细介绍，请访问[docsify官方地址](https://docsify.js.org/#/)。
 
