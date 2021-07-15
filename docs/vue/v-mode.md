@@ -216,3 +216,5 @@ console.log(Object.getOwnPropertyDescriptor(o, 'foo'));//获取属性描述符
 > ####  参数
 > ####  方法
 > ###  示例
+
+<p align="right">Page Update Time：{docsify-updated}</p>
