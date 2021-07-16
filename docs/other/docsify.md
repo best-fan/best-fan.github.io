@@ -86,7 +86,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   ```
-![预览图](http://blog.bravetimes.cn/api/public/uploads/2021/03/11/1615473232733519.png)
+![预览图](https://blog.bravetimes.cn/api/public/uploads/2021/03/11/1615473232733519.png)
   
 
 ##  docsify插件使用
@@ -105,7 +105,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 ```
 
-![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511492051529.png)
+![image](https://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511492051529.png)
 ### 图片缩放
 
 ```html
@@ -118,7 +118,7 @@
   <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 ```
-![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511534873758.png)
+![image](https://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511534873758.png)
 
 ###  复制代码
 
@@ -126,7 +126,7 @@
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 ```
 
-![image](http://blog.bravetimes.cn/api/public/uploads/2021/07/16/1626421501205619.png)
+![image](https://blog.bravetimes.cn/api/public/uploads/2021/07/16/1626421501205619.png)
 ###  在 Github 上编辑
 设置repo地址
 ```js
@@ -135,7 +135,7 @@
  }
 ```
 
-![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511717027562.png)
+![image](https://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511717027562.png)
 ##  总结
 docsify使用起来非常方便,而且使用md语法、插件功能比较丰富，适合文件系统的搭建，并且支持git hub page的部署，非常轻便。更多功能，详细介绍，请访问[docsify官方地址](https://docsify.js.org/#/)。
 
