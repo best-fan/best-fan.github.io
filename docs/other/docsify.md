@@ -7,18 +7,18 @@
 
 ###  安装docsify-cli 工具
 
-   ```
+   ```bash
     npm i docsify-cli -g  
 
    ```
    or
-   ```
+   ```bash
     yarn global add docsify-cli 
    ```
 
 ### 初始化项目  
 在`./docs `文件夹中写文档， 通过init  初始化项目
-    ```
+    ```bash
     docsify init ./docs
     ```
     成功后会生成一个 docs 的文件夹，并且里面有三个文件
@@ -28,18 +28,20 @@
 ### 启动项目
 
 -  使用docsify启动
-    ```
+    
+    ```bash
     docsify serve docs
+
     ```
    	
 -  使用 Python 启动
     
   - python 2.x
-    ```
+    ```bash
     cd docs && python -m SimpleHTTPServer 3000
     ```
   - python 3.x
-    ```
+    ```bash
     cd docs && python -m http.server 3000
     ```
 
@@ -54,7 +56,7 @@
 ###     配置侧边栏
     
 在 index.html 中，新增配置 loadSidebar: true
-   ```
+   ```html
     <script>
       window.$docsify = {
         loadSidebar: true
@@ -73,7 +75,7 @@
 ###    自动生成二级标题
 
 开启loadSidebar，并配置subMaxLevel
-  ```
+  ```html
   <!-- index.html -->
 
   <script>
@@ -90,7 +92,7 @@
 ##  docsify插件使用
 ###  全局搜索
 
-```
+```html
  window.$docsify = {
       search: {// 支持本地化
         placeholder: {
@@ -106,28 +108,28 @@
 ![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511492051529.png)
 ### 图片缩放
 
-```
+```html
   <!-- 图片缩放 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 ```
 ### 字数统计
 
-```
+```html
   <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 ```
-
 ![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511534873758.png)
+
 ###  复制代码
 
-```
+```html
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 ```
 
-![image](http://blog.bravetimes.cn/api/public/uploads/2021/03/12/1615511590341126.png)
+![image](http://blog.bravetimes.cn/api/public/uploads/2021/07/16/1626421501205619.png)
 ###  在 Github 上编辑
 设置repo地址
-```
+```js
  window.$docsify = {
  	repo: 'https://github.com//best-fan/best-fan.github.io/',
  }

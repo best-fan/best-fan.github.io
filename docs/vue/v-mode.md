@@ -36,7 +36,7 @@ Vue 中数据双向绑定 主要指：数据变化更新视图，视图变化更
 
 1. **configurable**:表示该属性**是否可以使用 delete 删除** 默认为 false
 2. **enumerable**:表示该属性**是否可以枚举**，即是否可以通过 for..in 访问属性 默认为 false
-```
+```js
 //Demo
     var eObj = {};
     Object.defineProperty(eObj, "a", { value: 1, enumerable: true });
@@ -75,7 +75,7 @@ Vue 中数据双向绑定 主要指：数据变化更新视图，视图变化更
 ```
 3. **value**:表示**该属性的值**：可以是有效的 Javascript 值 默认为 undefined
 4. **writable**:表示该属性的值**是否可以修改** 默认为 false
-```
+```js
   //Demo：
     var o = {}; // 创建一个新对象
     Object.defineProperty(o, 'a', {
@@ -95,7 +95,7 @@ Vue 中数据双向绑定 主要指：数据变化更新视图，视图变化更
     // console.log('new', oo.a); // logs 25
 ```
 汇总:
-```
+```js
     //隐式  使用_proto_
     var objs = {};
     var objsss = {};
@@ -119,7 +119,7 @@ Vue 中数据双向绑定 主要指：数据变化更新视图，视图变化更
    默认为 undefined。 2.**set**:属性的 setter 函数，如果没有 setter，则为 undefined。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的 this 对象。
    默认为 undefined。
 
-```
+```js
 Object.getOwnPropertyDescriptor() 方法返回指定对象上一个自有属性对应的属性描述符
 var obj={a:10}
 console.log(Object.getOwnPropertyDescriptor(obj, 'a')); //获取属性描述符
@@ -130,7 +130,7 @@ console.log(Object.getOwnPropertyDescriptor(o, 'foo'));//获取属性描述符
 ```
 2. **set**:属性的 set 函数，如果没有 setter，则为 **undefined**。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是被赋予的新值），会传入赋值时的 this 对象。默认为 undefined。
 
-```
+```js
 Object.getOwnPropertyDescriptor() 方法返回指定对象上一个自有属性对应的属性描述符
 var obj={a:10}
 console.log(Object.getOwnPropertyDescriptor(obj, 'a')); //获取属性描述符
@@ -147,7 +147,7 @@ console.log(Object.getOwnPropertyDescriptor(o, 'foo'));//获取属性描述符
 案例将分为单个数据、多个数据处理示例展示。
 #### 单个数据
 
-``` 
+```js
     let data = { msg: '123',}
     var  vm=Object.create(null);
     Object.defineProperty(vm, 'msg', {
@@ -175,7 +175,7 @@ console.log(Object.getOwnPropertyDescriptor(o, 'foo'));//获取属性描述符
 ```
 #### 多个数据
 
-```
+```js
     let data = {
         msg: '123',
         show:'hello'
