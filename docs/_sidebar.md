@@ -1,6 +1,11 @@
 
 * Vue
     - [vue响应式原理](vue/v-mode.md) 
+    - [vue2.x源码学习(一)](vue/2.x-1.md)
+    - [vue2.x源码学习(二)](vue/2.x-2.md)
+    - [vue2.x源码学习(三)](vue/2.x-3.md)
+
+
  
     
 * JavaScript
