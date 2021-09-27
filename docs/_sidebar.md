@@ -9,6 +9,10 @@
 
     
 * JavaScript
+    - [设计模式-开篇](javascript/js-mode.md)
+
+    - [设计模式-观察者模式](javascript/js-mode-observer.md)
+
     - [闭包](javascript/closure.md)
     - [原型](javascript/prototype.md)
 
@@ -20,5 +24,4 @@
 
 * 经验分享
     - [H5 微信授权](share/h5-weChat.md)
-
 
