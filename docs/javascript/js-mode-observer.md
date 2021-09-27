@@ -6,16 +6,16 @@
  ### 举例
   - 当你使用QQ发送群消息时，如果有人将你设为特别关注，那么当你发送消息后，QQ会通知所有关注你的人。他们会选择进行回复和查看。
   -  DOM监听事件
-        ```js
+    ```js
         document.body.addEventListener('click', function() {
             console.log('hello world!');
         });
         document.body.click()
-        ```
+    ```
 
 ## 代码示例
 
-    ```js
+```js
     //状态变化之后触发所有观察者对象
     class Subject{
         constructor(){//构造方法
@@ -59,8 +59,8 @@
     let person2=new Observer({name:'李四',workYear:1},QQjob);
     QQjob.setState('急缺');
     // name:张三,workYear:3,job State:急缺
-    // 1.js:32 name:李四,workYear:1,job State:急缺
-    ```
+    // name:李四,workYear:1,job State:急缺
+```
 
 ## 优点
 
