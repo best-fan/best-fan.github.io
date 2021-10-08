@@ -10,10 +10,73 @@
 - 证件有效期、失效日期(显示最后 4 位)
 - 邮箱(显示@之后)
 
+
 其他输入内容用*号标识
 ## 分析
+用户在输入内容时，需要实时的监听用户的输入(监听<kbd >input</kbd>事件)，同时，对指定类型的内容进行加密，由于可以对加密的字段进行显示、隐藏的切换，所以，需要保存用户输入的未加密内容。 为了加密过程更加流程 对用户输入完的监听增加 节流函数。
+- bug修复：对用中文输入会直接触发input方法，导致用户输入的中文无法存储。所以中文输入时需要监听 <kbd>compositionstart</kbd >、<kbd >compositionend</kbd >事件，在<kbd >compositionend</kbd > 时触发 <kbd >input</kbd >方法对数据进行处理。
 
-## 源码
+## 实现过程
+- 1、监听用户输入框input事件
+- 2、完成输入内容存储
+- 3、加密脱敏方法实现
+- 4、完成显示、隐藏的数据切换
+- 5、bux修复：输入中文监听实现
+
+## 核心代码
+```js
+  /**
+   * 对输入的内容 按照规则进行加密
+   * @param {*} val 原始值
+   * @param {*} startNum 头部需要显示的字符串位数
+   * @param {*} endNum 尾部需要显示的字符串位数
+   * @returns
+   */
+  function handleShowVal(val, startNum, endNum) {
+    let valLenth = val.length;
+    const hideLength = startNum + endNum;
+    if (valLenth - hideLength >= 0) {
+      return (
+        val.substr(0, startNum) +
+        new Array(valLenth - hideLength + 1).join("*") +
+        val.substr(valLenth - endNum, valLenth)
+      );
+    } else {
+      return val;
+    }
+  }
+
+  /**
+   * 保存用户输入的值 获取缓存值
+   * 对于加密的内容先获取本地缓存 处理后再保存 ，未加密则直接保存
+   * @param {*} key 存储的唯一标识
+   * @param {*} value 存储的值
+   * @param {*} isSave 是否保存
+   * @returns
+   */
+  function sessionValue(key, value, isSave) {
+    if (isSave) {
+      let saveVal = value;
+      if (value.includes("*")) {//输入框中是否含有加密字段
+        let tList = value.split(""); //将当前输入内容分割为数组
+        let sList = sessionStorage.getItem("tp_" + key).split(""); //session中对应的数据
+        tList.map((val, index) => {
+          if (val == "*") {
+            tList[index] = sList[index];//将输入框中的加密字符串替换为 未加密数据
+          }
+        });
+        saveVal = tList.toString().replace(/,/g, "");
+      }
+      sessionStorage.setItem("tp_" + key, saveVal);
+
+      return saveVal;
+    }
+
+    return sessionStorage.getItem("tp_" + key) || "";
+  }
+```
+
+## 完整源码
 
 ```html
 <!DOCTYPE html>
@@ -257,3 +320,6 @@ $(".from-input").on("input", function () {
   }
 });
 ```
+## 效果
+![图一](https://blog.bravetimes.cn/api/public/uploads/2021/10/08/1633659465274180.png)
+![图二](https://blog.bravetimes.cn/api/public/uploads/2021/10/08/163365960538941.png)
