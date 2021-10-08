@@ -6,6 +6,9 @@
     - [vue2.x源码-构建区别](vue/2.x-3.md)
     - [vue2.x源码-入口分析](vue/2.x-4.md)
     - [vue2.x源码学习-数据驱动](vue/2.x-5.md)
+    - [vue2.x源码学习-render](vue/2.x-6.md)
+    - [vue2.x源码学习-Virtual DOM](vue/2.x-7.md)
+
 
     
 * JavaScript
