@@ -30,7 +30,7 @@ SO 体现较多的：Promise
 
 ## 设计模式分类
 - 创建型
-    - 单例模式
+    - [单例模式](javascript/js-mode-singleton.md)
     - 原型模式
     - 工厂模式
     - 抽象工厂模式

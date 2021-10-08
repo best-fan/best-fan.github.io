@@ -5,7 +5,7 @@
 观察者模式(Observer Pattern)：定义了一种 **一对多的依赖关系**，让**多个观察者对象 同时 监听某一个主题的对象**，当这个主题对象的状态发生改变时就会通知多个观察者对象，使它们能够自动更新自己。
 ![观察者模式](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/12/16ef7fe567bdf007~tplv-t2oaga2asx-watermark.awebp)
 
-### 使用场景：
+### 适用场景：
 
 当一个对象的改变需要同时改变其他对象，并且它不知道具体有多少对象需要改变的时候，就可以考虑使用观察者模式。
 
@@ -105,7 +105,7 @@ webjob.setState("急缺");
 
 ![发布订阅模式](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/12/12/16ef7fe5614d6ea0~tplv-t2oaga2asx-watermark.awebp)
 
-### 使用场景：
+### 适用场景：
 
 当存在多个发布者 和订阅者，而且 订阅者、发布者各自有较为复杂的逻辑处理，可以考虑使用发布订阅模式。
 
