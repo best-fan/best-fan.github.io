@@ -14,6 +14,8 @@
 * JavaScript
     - [设计模式-开篇](javascript/js-mode.md)
     - [设计模式-单例模式](javascript/js-mode-singleton.md)
+    - [设计模式-原型模式](javascript/js-mode-prototype.md)
+
     - [设计模式-观察者模式](javascript/js-mode-observer.md)
 
     - [闭包](javascript/closure.md)
