@@ -59,6 +59,7 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 </body>
 <style>
+  /* 自定义样式 */
   .docsify-copy-code-button .success {
     color: #2dbf08;
     background: rgb(16 22 26 / 10%);
@@ -70,13 +71,37 @@
     color: var(--theme-color, #42b983);
   }
 
+  :root {
+    --theme-color: #1e9260;
+  }
+  input{
+    background: rgba(255,255,255,0.4);
+  }
+  .sidebar-toggle {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+   .markdown-section tr:nth-child(2n) {
+    background: transparent;
+  }
   p {
     /* 禁止选择 */
     user-select: none;
   }
 
+  body {
+    background: url(http://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg) 0% 0% / cover no-repeat fixed;
+  }
+
   #main {
-    background: #f0f8ff5c;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .markdown-section {
+    max-width: 90%;
+  }
+
+  .sidebar {
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .markdown-section pre {
@@ -101,8 +126,8 @@
       if (doms.length > 0) {
         doms[0].remove();
       }
-      console.log('e',e);
-      
+      console.log('e', e);
+
       var spanDom = document.createElement('span');
       spanDom.className = 'addAnimatedText';
       const iconIndex = Math.ceil(Math.random() * iconList.length - 1);
@@ -114,7 +139,7 @@
       // spanDom.style.top = e.pageY + 'px';
       spanDom.style.position = 'fixed';
       spanDom.style.left = e.clientX + 'px';
-      spanDom.style.top = e.clientY-5 + 'px';
+      spanDom.style.top = e.clientY - 5 + 'px';
       spanDom.style.color = "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
       document.getElementsByTagName('body')[0].appendChild(spanDom);
       clearInterval(timer);
