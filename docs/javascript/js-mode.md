@@ -32,7 +32,7 @@ SO 体现较多的：Promise
 - 创建型
     - [单例模式](javascript/js-mode-singleton.md)
     - [原型模式](javascript/js-mode-prototype.md)
-    - 工厂模式
+    - [简单工厂模式](javascript/js-mode-factory.md)
     - 抽象工厂模式
     - 建造者模式
 - 结构型
