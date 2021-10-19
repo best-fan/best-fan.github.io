@@ -343,6 +343,13 @@ location.search.replace(/([^?&=]+)=([^&]+)/g, (_, k, v) => (q[k] = v));
 console.log(q);
 ```
 
+
+## 异步函数的回调
+
+
 ## VUE 样式穿透
 
 - 使用 ::v-deep 进行穿透
+
+
+<p align="right">Page Update Time：{docsify-updated}</p>
