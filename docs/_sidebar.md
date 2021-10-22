@@ -10,10 +10,13 @@
 - JavaScript
 
   - [设计模式-开篇](javascript/js-mode.md)
-  - [设计模式-单例模式](javascript/js-mode-singleton.md)
-  - [设计模式-原型模式](javascript/js-mode-prototype.md)
-  - [设计模式-观察者模式](javascript/js-mode-observer.md)
-  - [设计模式-简单工厂模式](javascript/js-mode-factory.md)
+  - 创建型-设计模式
+    - [单例模式](javascript/js-mode-singleton.md)
+    - [原型模式](javascript/js-mode-prototype.md)
+    - [观察者模式](javascript/js-mode-observer.md)
+    - [简单工厂模式](javascript/js-mode-factory.md)
+    - [抽象工厂模式](javascript/js-mode-abstractFactory.md)
+    - [建造者模式](javascript/js-mode-builder.md)
   - [JavaScript 实用方法](javascript/js-use-skill.md)
   - [闭包](javascript/closure.md)
   - [原型](javascript/prototype.md)

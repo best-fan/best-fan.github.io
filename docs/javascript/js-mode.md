@@ -34,7 +34,7 @@ SO 体现较多的：Promise
     - [原型模式](javascript/js-mode-prototype.md)
     - [简单工厂模式](javascript/js-mode-factory.md)
     - [抽象工厂模式](javascript/js-mode-abstractFactory.md)
-    - 建造者模式
+    - [建造者模式](javascript/js-mode-builder.md)
 - 结构型
     - 适配器模式
     - 装饰器模式
