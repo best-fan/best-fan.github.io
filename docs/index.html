@@ -93,7 +93,7 @@
     }
     
     body {
-        background: url(http://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg) 0% 0% / cover no-repeat fixed;
+        background: url(https://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg) 0% 0% / cover no-repeat fixed;
     }
     
     #main {
@@ -127,16 +127,12 @@
             if (doms.length > 0) {
                 doms[0].remove();
             }
-
             var spanDom = document.createElement('span');
             spanDom.className = 'addAnimatedText';
             const iconIndex = Math.ceil(Math.random() * iconList.length - 1);
             const textIndex = Math.ceil(Math.random() * textList.length - 1);
             spanDom.appendChild(document.createTextNode(`${iconList[iconIndex]}${textList[textIndex]}${iconList[iconIndex]}`));
             spanDom.style.zIndex = '999999';
-            // spanDom.style.position = 'absolute';
-            // spanDom.style.left = e.pageX + 'px';
-            // spanDom.style.top = e.pageY + 'px';
             spanDom.style.position = 'fixed';
             spanDom.style.left = e.clientX + 'px';
             spanDom.style.top = e.clientY - 5 + 'px';
@@ -144,13 +140,10 @@
             document.getElementsByTagName('body')[0].appendChild(spanDom);
             clearInterval(timer);
             setStyle(spanDom, 1500)
-
             // 需求
             // 总共 2500s   执行一次 10ms    共计多少次 2500/10
             // 花费次数 time=  2500/10;
             function setStyle(spanDom, compliteTime = 2500) {
-                // let top = e.pageY;//原始Y坐标位置
-
                 let top = e.clientY; //原始Y坐标位置
                 let opacity = 1;
                 moveTop = 180; //Y坐标移动距离
@@ -161,7 +154,6 @@
                     spanDom.style.top = top - moveTop / (compliteTime / timmerTime) * time + 'px';
                     spanDom.style.opacity = 1 - 1 / (compliteTime / timmerTime) * time;
                     if (time >= compliteTime / timmerTime) {
-                        // console.log('timer', time);
                         clearInterval(timer);
                         document.getElementsByClassName('addAnimatedText')[0].remove();
                         return;
