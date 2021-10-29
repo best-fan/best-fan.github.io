@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Learn To Better</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
     <!-- 更新 引用资源url -->
-    <link rel="stylesheet" href="//blog.bravetimes.cn/project/blogUnit/theme-vue.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="//blog.bravetimes.cn/project/blogUnit/theme-vue.css"
+    />
+  </head>
 
-<body>
-    <div id="app">
-        念念不忘，必有回响
-    </div>
+  <body>
+    <div id="app">念念不忘，必有回响</div>
     <script>
-        window.$docsify = {
-            name: 'Learn To Better',
-            loadSidebar: true,
-            coverpage: false, //是否启用封面
-            // 自定义文件名
-            // coverpage: 'cover.html',
-            // onlyCover: false,//是否只显示封面
-            alias: {
-                '/.*/_sidebar.md': '/_sidebar.md'
-            },
-            subMaxLevel: 4,
-            search: { // 支持本地化
-                placeholder: {
-                    '/zh-cn/': '搜索',
-                    '/': '有问题 搜一下'
-                }
-            },
-            formatUpdated: '{MM}/{DD} {HH}:{mm}',
-            repo: 'https://github.com//best-fan/best-fan.github.io/',
-            count: {
-                countable: true,
-                fontsize: '0.9em',
-                color: 'rgb(90,90,90)',
-                language: 'chinese'
-            }
-        }
+      window.$docsify = {
+        name: "Learn To Better",
+        loadSidebar: true,
+        coverpage: false, //是否启用封面
+        // 自定义文件名
+        // coverpage: 'cover.html',
+        // onlyCover: false,//是否只显示封面
+        alias: {
+          "/.*/_sidebar.md": "/_sidebar.md",
+        },
+        subMaxLevel: 4,
+        search: {
+          // 支持本地化
+          placeholder: {
+            "/zh-cn/": "搜索",
+            "/": "有问题 搜一下",
+          },
+        },
+        formatUpdated: "{MM}/{DD} {HH}:{mm}",
+        repo: "https://github.com//best-fan/best-fan.github.io/",
+        count: {
+          countable: true,
+          fontsize: "0.9em",
+          color: "rgb(90,90,90)",
+          language: "chinese",
+        },
+      };
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -57,113 +61,236 @@
     <script src="//blog.bravetimes.cn/project/blogUnit/docsify-copy-code.js"></script>
     <!-- 代码高亮 -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-</body>
-<style>
+  </body>
+  <style>
     /* 自定义样式 */
-    
+
     .docsify-copy-code-button .success {
-        color: #2dbf08;
-        background: rgb(16 22 26 / 10%);
+      color: #2dbf08;
+      background: rgb(16 22 26 / 10%);
     }
-    
+
     kbd {
-        background-color: #f8f8f8;
-        color: var(--theme-color, #42b983);
+      background-color: #f8f8f8;
+      color: var(--theme-color, #42b983);
     }
-    
-     :root {
-        --theme-color: #1e9260;
+
+    :root {
+      --theme-color: #1e9260;
     }
-    
+
     input {
-        background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.4);
     }
-    
+
     .sidebar-toggle {
-        background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
-    
+
     .markdown-section tr:nth-child(2n) {
-        background: transparent;
+      background: transparent;
     }
-    
+
     p {
-        /* 禁止选择 */
-        user-select: none;
+      /* 禁止选择 */
+      user-select: none;
     }
-    
+
     body {
-        background: url(https://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg) 0% 0% / cover no-repeat fixed;
+      background: url(https://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg)
+        0% 0% / cover no-repeat fixed;
     }
-    
+
     #main {
-        background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.7);
     }
-    
+
     .markdown-section {
-        max-width: 90%;
+      max-width: 90%;
     }
-    
+
     .sidebar {
-        background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.8);
     }
-    
+
     .markdown-section pre {
-        border: 2px solid #0000002e;
+      border: 2px solid #0000002e;
     }
-    
+
     .markdown-section code,
     .markdown-section pre {
-        background: #f8f8f84d;
+      background: #f8f8f84d;
     }
-</style>
-<script>
+  </style>
+  <script>
     var timer;
-    window.addEventListener('DOMContentLoaded', function() {
-        var iconList = ["❤", "🌈", '😂', "🐷", "👍", "😍", "😄", "😘", "😎", "🤗", "😚", "🤑", "🤡", "🧐", "😻", "🐱‍🚀", "🐵", "🐶", "🎅", "👼", "🎈", "✨", "🎉", "🎄", "🎉", "🎁", "🎨", "🎵", "🥇", "🍔", "🍟", "🌭", "🍿", "🍬", "🍄", "🍓", "🏵", "🌺", "🌼", "🍁", "⭐", "🔥", "🌍", "🛸", "🌏", "🏝", "🌞", "🌟"]
-        var textList = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
-        document.getElementsByTagName('body')[0].addEventListener('click', function(e) {
-            doms = document.getElementsByClassName('addAnimatedText');
-            if (doms.length > 0) {
-                doms[0].remove();
-            }
-            var spanDom = document.createElement('span');
-            spanDom.className = 'addAnimatedText';
-            const iconIndex = Math.ceil(Math.random() * iconList.length - 1);
-            const textIndex = Math.ceil(Math.random() * textList.length - 1);
-            spanDom.appendChild(document.createTextNode(`${iconList[iconIndex]}${textList[textIndex]}${iconList[iconIndex]}`));
-            spanDom.style.zIndex = '999999';
-            spanDom.style.position = 'fixed';
-            spanDom.style.left = e.clientX + 'px';
-            spanDom.style.top = e.clientY - 5 + 'px';
-            spanDom.style.color = "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-            document.getElementsByTagName('body')[0].appendChild(spanDom);
-            clearInterval(timer);
-            setStyle(spanDom, 1500)
-            // 需求
-            // 总共 2500s   执行一次 10ms    共计多少次 2500/10
-            // 花费次数 time=  2500/10;
-            function setStyle(spanDom, compliteTime = 2500) {
-                let top = e.clientY; //原始Y坐标位置
-                let opacity = 1;
-                moveTop = 180; //Y坐标移动距离
-                let timmerTime = 5; //每10ms执行一次
-                let time = 0; //总计花费时间
-                timer = setInterval(function() {
-                    time++;
-                    spanDom.style.top = top - moveTop / (compliteTime / timmerTime) * time + 'px';
-                    spanDom.style.opacity = 1 - 1 / (compliteTime / timmerTime) * time;
-                    if (time >= compliteTime / timmerTime) {
-                        clearInterval(timer);
-                        document.getElementsByClassName('addAnimatedText')[0].remove();
-                        return;
+    window.addEventListener("DOMContentLoaded", function () {
+      var iconList = [
+        "❤",
+        "🌈",
+        "😂",
+        "🐷",
+        "👍",
+        "😍",
+        "😄",
+        "😘",
+        "😎",
+        "🤗",
+        "😚",
+        "🤑",
+        "🤡",
+        "🧐",
+        "😻",
+        "🐱‍🚀",
+        "🐵",
+        "🐶",
+        "🎅",
+        "👼",
+        "🎈",
+        "✨",
+        "🎉",
+        "🎄",
+        "🎉",
+        "🎁",
+        "🎨",
+        "🎵",
+        "🥇",
+        "🍔",
+        "🍟",
+        "🌭",
+        "🍿",
+        "🍬",
+        "🍄",
+        "🍓",
+        "🏵",
+        "🌺",
+        "🌼",
+        "🍁",
+        "⭐",
+        "🔥",
+        "🌍",
+        "🛸",
+        "🌏",
+        "🏝",
+        "🌞",
+        "🌟",
+      ];
+      var textList = new Array(
+        "富强",
+        "民主",
+        "文明",
+        "和谐",
+        "自由",
+        "平等",
+        "公正",
+        "法治",
+        "爱国",
+        "敬业",
+        "诚信",
+        "友善"
+      );
+      document
+        .getElementsByTagName("body")[0]
+        .addEventListener("click", function (e) {
+          doms = document.getElementsByClassName("addAnimatedText");
+          if (doms.length > 0) {
+            doms[0].remove();
+          }
+          var spanDom = document.createElement("span");
+          spanDom.className = "addAnimatedText";
+          const iconIndex = Math.ceil(Math.random() * iconList.length - 1);
+          const textIndex = Math.ceil(Math.random() * textList.length - 1);
+          spanDom.appendChild(
+            document.createTextNode(
+              `${iconList[iconIndex]}${textList[textIndex]}${iconList[iconIndex]}`
+            )
+          );
+          spanDom.style.zIndex = "999999";
+          spanDom.style.position = "fixed";
+          spanDom.style.left = e.clientX + "px";
+          spanDom.style.top = e.clientY - 5 + "px";
+          spanDom.style.color =
+            "rgb(" +
+            ~~(255 * Math.random()) +
+            "," +
+            ~~(255 * Math.random()) +
+            "," +
+            ~~(255 * Math.random()) +
+            ")";
+          document.getElementsByTagName("body")[0].appendChild(spanDom);
+          clearInterval(timer);
+          setStyle(spanDom, 1500);
+          // 需求
+          // 总共 2500s   执行一次 10ms    共计多少次 2500/10
+          // 花费次数 time=  2500/10;
+          function setStyle(spanDom, compliteTime = 2500) {
+            let top = e.clientY; //原始Y坐标位置
+            let opacity = 1;
+            moveTop = 180; //Y坐标移动距离
+            let timmerTime = 5; //每10ms执行一次
+            let time = 0; //总计花费时间
+            timer = setInterval(function () {
+              time++;
+              spanDom.style.top =
+                top - (moveTop / (compliteTime / timmerTime)) * time + "px";
+              spanDom.style.opacity =
+                1 - (1 / (compliteTime / timmerTime)) * time;
+              if (time >= compliteTime / timmerTime) {
+                clearInterval(timer);
+                document.getElementsByClassName("addAnimatedText")[0].remove();
+                return;
+              }
+            }, timmerTime);
+          }
+        });
+    });
+  </script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script>
+    /**
+     * 获取一个 内容
+     * */
+    function getOneData() {
+      axios
+        .get("https://api.bravetimes.cn/tool-api/get-one-data")
+        .then((res) => {
+          const resData = res.data;
+          if (resData.data) {
+            const oneList = resData.data;
+            start(oneList);
+          }
+        });
+    }
+    let webUrl = "";
+    getOneData();
+    function start(oneList) {
+      setInterval(() => {
+        isChangeRouter();
+        if (isChangeRouter() != webUrl) {
+          webUrl = isChangeRouter();
+          setDomText(oneList);
+        }
+      }, 4000);
+    }
 
-                    }
-                }, timmerTime)
-            }
-        })
-
-    })
-</script>
-
+    function setDomText(dataList) {
+      const index = Math.floor(Math.random() * dataList.length);
+      const doms = document.getElementsByClassName("markdown-section")[0];
+      const pDoms = document.createElement("p");
+      pDoms.textContent = `${dataList[index].id}: ${dataList[index].text}----${dataList[index].time}`;
+      pDoms.className = "one-tips";
+      pDoms.title = "换一个！";
+      pDoms.setAttribute("style", "color:#d68080;cursor: pointer;");
+      doms.append(pDoms);
+      pDoms.addEventListener("click", function (e) {
+        // console.log("换一个");
+        webUrl = "";
+        pDoms.remove();
+      });
+      // console.log("设置成功");
+    }
+    function isChangeRouter() {
+      return window.location.href;
+    }
+  </script>
 </html>
