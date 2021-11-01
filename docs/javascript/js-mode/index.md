@@ -30,21 +30,21 @@ SO 体现较多的：Promise
 
 ## 设计模式分类
 - 创建型
-    - [单例模式](javascript/js-mode-singleton.md)
-    - [原型模式](javascript/js-mode-prototype.md)
-    - [简单工厂模式](javascript/js-mode-factory.md)
-    - [抽象工厂模式](javascript/js-mode-abstractFactory.md)
-    - [建造者模式](javascript/js-mode-builder.md)
+    - [单例模式](javascript/js-mode/js-mode-singleton.md)
+    - [原型模式](javascript/js-mode/js-mode-prototype.md)
+    - [简单工厂模式](javascript/js-mode/js-mode-factory.md)
+    - [抽象工厂模式](javascript/js-mode/js-mode-abstractFactory.md)
+    - [建造者模式](javascript/js-mode/js-mode-builder.md)
 - 结构型
-    - 适配器模式
-    - 装饰器模式
+    - [适配器模式](javascript/js-mode/js-mode-adapter.md)
+    - [装饰器模式](javascript/js-mode/js-mode-decorator.md)
     - 代理模式
     - 外观模式
     - 桥接模式
     - 组合模式
     - 享元模式
 - 行为型
-    - [观察者模式(发布-订阅模式)](javascript/js-mode-observer.md)
+    - [观察者模式(发布-订阅模式)](javascript/js-mode/js-mode-observer.md)
     - 迭代器模式
     - 策略模式
     - 模板方法模式

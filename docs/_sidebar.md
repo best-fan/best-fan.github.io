@@ -9,7 +9,7 @@
   - [vue2.x 源码学习-Virtual DOM](vue/2.x-7.md)
 - JavaScript
 
-  - [设计模式-开篇](javascript/js-mode/js-mode.md)
+  - [设计模式-开篇](javascript/js-mode/index.md)
   - 创建型-设计模式
     - [单例模式](javascript/js-mode/js-mode-singleton.md)
     - [原型模式](javascript/js-mode/js-mode-prototype.md)
@@ -19,6 +19,7 @@
     - [建造者模式](javascript/js-mode/js-mode-builder.md)
   - 结构性-设计模式
     - [适配器模式](javascript/js-mode/js-mode-adapter.md)
+    - [装饰器模式](javascript/js-mode/js-mode-decorator.md)
   - 行为型-设计模式
     - [观察者模式](javascript/js-mode/js-mode-observer.md)
   - [JavaScript 实用方法](javascript/js-use-skill.md)
