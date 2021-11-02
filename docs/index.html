@@ -279,11 +279,10 @@
       const pDoms = document.createElement("p");
       pDoms.textContent = `${dataList[index].id}: ${dataList[index].text}----${dataList[index].time}`;
       pDoms.className = "one-tips";
-      pDoms.title = "换一个！";
+      pDoms.title = "💥这是个彩蛋🥚！💥";
       pDoms.setAttribute("style", "color:#d68080;cursor: pointer;");
       doms.append(pDoms);
       pDoms.addEventListener("click", function (e) {
-        // console.log("换一个");
         webUrl = "";
         pDoms.remove();
       });
