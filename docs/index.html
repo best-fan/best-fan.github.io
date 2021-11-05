@@ -254,9 +254,9 @@
       axios
         .get("https://api.bravetimes.cn/tool-api/get-one-data")
         .then((res) => {
-          const resData = res.data;
-          if (resData.data) {
-            const oneList = resData.data;
+          const resData = res.data.resData;
+          if (resData.list) {
+            const oneList = resData.list;
             start(oneList);
           }
         });
@@ -286,7 +286,7 @@
         webUrl = "";
         pDoms.remove();
       });
-      // console.log("设置成功");
+      console.log("设置成功");
     }
     function isChangeRouter() {
       return window.location.href;
