@@ -34,6 +34,9 @@
 
   - [docsify 使用](tool/docsify.md)
 
+- 其他
+  - [每日一句](other/daily.md)
+
 - 经验分享
   - [H5 微信授权](share/h5-weChat.md)
   - [web-脱敏方案](share/web-desensitization.md)
