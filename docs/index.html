@@ -311,7 +311,6 @@
                 pDoms.title = "💥这是个彩蛋🥚！💥";
                 break;
             case 'get-zh-data':
-                console.log(dataList[index].id, dataList[index].text)
                 pDoms = document.getElementsByClassName('zh-data')[0]
                 let text = dataList[index].text.replaceAll(/;|；|,|，|。|\./g, '<br>').replaceAll(/-|——/g, '<br> source:')
                 pDoms.innerHTML = text;
@@ -357,13 +356,13 @@
         }
         if (currentUrl.endsWith('/')) { //首页设置一言
             getOneData()
-            console.log('设置首页')
+                // console.log('设置首页')
 
         }
         if (currentUrl.endsWith('/daily')) {
             getOneData('get-zh-data')
             addNewYearDom();
-            console.log('设置知乎')
+            // console.log('设置知乎')
 
         }
     }
@@ -372,9 +371,6 @@
 
     function addNewYearDom() {
         const nextYear = new Date().getFullYear() + 1;
-        console.log(nextYear)
-
-
         clearInterval(timmer)
         timmer = setInterval(() => {
             let doms = document.getElementsByClassName('end-new-year')[0];
