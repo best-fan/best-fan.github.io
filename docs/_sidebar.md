@@ -33,6 +33,7 @@
 - 工具
 
   - [docsify 使用](tool/docsify.md)
+  - [npm And yarn](tool/tool_npm.md)
 
 - 其他
   - [每日一句](other/daily.md)
