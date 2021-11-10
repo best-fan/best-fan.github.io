@@ -20,6 +20,8 @@
   - 结构性-设计模式
     - [适配器模式](javascript/js-mode/js-mode-adapter.md)
     - [装饰器模式](javascript/js-mode/js-mode-decorator.md)
+    - [代理模式](javascript/js-mode/js-mode-agent.md)
+
   - 行为型-设计模式
     - [观察者模式](javascript/js-mode/js-mode-observer.md)
   - [JavaScript 实用方法](javascript/js-use-skill.md)
@@ -31,7 +33,7 @@
   - [布局](css/layout.md)
 
 - 工具
-
+  - [uwsgi 使用](tool/uwsgi.md)
   - [docsify 使用](tool/docsify.md)
   - [包管理工具](tool/tool_npm.md)
 
