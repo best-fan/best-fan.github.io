@@ -36,6 +36,8 @@
   - [uwsgi 使用](tool/uwsgi.md)
   - [docsify 使用](tool/docsify.md)
   - [包管理工具](tool/tool_npm.md)
+  - [Linux 命令相关](tool/tool_linux.md)
+
 
 - 其他
   - [每日一句](other/daily.md)
