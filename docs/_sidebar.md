@@ -41,6 +41,8 @@
 
 - 其他
   - [每日一句](other/daily.md)
+  - [每日头条](other/hotWord.md)
+
 
 - 经验分享
   - [H5 微信授权](share/h5-weChat.md)

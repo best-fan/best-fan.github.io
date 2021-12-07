@@ -1,0 +1,112 @@
+  /* 自定义样式 */
+    
+  .docsify-copy-code-button .success {
+    color: #2dbf08;
+    background: rgb(16 22 26 / 10%);
+}
+
+kbd {
+    background-color: #f8f8f8;
+    color: var(--theme-color, #42b983);
+}
+
+ :root {
+    --theme-color: #1e9260;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-toggle {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.markdown-section tr:nth-child(2n) {
+    background: transparent;
+}
+
+p {
+    /* 禁止选择 */
+    user-select: none;
+}
+
+body {
+    background: url(https://blog.bravetimes.cn/api/public/uploads/2021/10/18/bg.jpg) 0% 0% / cover no-repeat fixed;
+}
+
+#main {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.markdown-section {
+    max-width: 90%;
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.markdown-section pre {
+    border: 2px solid #0000002e;
+}
+
+.markdown-section code,
+.markdown-section pre {
+    background: #f8f8f84d;
+}
+
+.app-name-link {
+    /* font-size: 14px; */
+    margin-top: 0;
+    text-align: center;
+    -webkit-background-size: 200% 100%;
+    background-image: linear-gradient( 90deg, #fa8bff 0%, #2bd2ff 52%, #fd34fd 90%);
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: masked-animation-data-v-5faaa043 8.5s ease-in-out infinite;
+}
+
+.one-tips {
+    margin-top: 0;
+    text-align: left;
+    -webkit-background-size: 200% 100%;
+    background-image: linear-gradient(90deg, #4995fbb3 90%, #fd34fd 10%);
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: masked-animation-data-v-5faaa043 15s ease-in-out infinite;
+}
+
+@keyframes masked-animation-data-v-5faaa043 {
+    0% {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+.zh-tips {
+    font-size: 16px;
+}
+
+.markdown-section td,
+.markdown-section th {
+    background: #fffbedba;
+}
+
+.basm-div {
+    position: fixed;
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    width: 100vw;
+    background-color: #d6d6d6;
+}
+
+.basm-div a {
+    color: black;
+    margin-right: 10px;
+}
