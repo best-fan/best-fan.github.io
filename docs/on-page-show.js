@@ -135,17 +135,20 @@ function setDomText(dataList, askUrl) {
     pDoms.setAttribute("style", "color:#d68080;cursor: pointer;");
     doms.append(pDoms);
     //添加 点击 箭头事件
-    pDoms.addEventListener("click", function(e) {
-        if (askUrl == "get-zh-data") {
-            pDoms.innerHTML = "";
-        } else {
-            pDoms.remove();
-        }
+    setTimeout(() => {
+        pDoms.addEventListener("click", function(e) {
+            if (askUrl == "get-zh-data") {
+                pDoms.innerHTML = "";
+            } else {
+                pDoms.remove();
+            }
 
-        setTimeout(() => {
-            getPyData(askUrl);
-        }, nomerTime);
-    });
+            setTimeout(() => {
+                getPyData(askUrl);
+            }, nomerTime);
+        });
+    }, 2000);
+
     setAskSuccess(askUrl)
 }
 //设置接口请求状态
@@ -202,8 +205,9 @@ function onWebUrlChange() {
         getPyData("get-weibo-hot", true);
         getPyData("get-baidu-hot", true);
         getPyData("get-toutiao-hot", true);
-
-        hotWordAddLister()
+        setTimeout(() => {
+            hotWordAddLister()
+        }, 3000);
     }
 }
 //每日头条 监听事件
