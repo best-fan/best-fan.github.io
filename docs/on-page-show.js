@@ -53,6 +53,7 @@ function sethotWordPage(url, data, time) {
             document.getElementsByClassName('hot-word-toutiao-list')[0].innerHTML = '';
             console.log('data', toutiaoData)
             toutiaoData.data.forEach((itm, idx) => {
+                itm.Label=='amos'?itm.Label='':'';
                 appendDom('hot-word-toutiao-list', { rank: idx, url: itm.Url, customPop: itm.QueryWord.replace(/"/g, "'"), word: itm.Title, num: itm.HotValue, icon_desc: itm.Label })
             })
             appendUpdateTimeDom('hot-word-toutiao-list', time, url)
