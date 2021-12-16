@@ -165,9 +165,9 @@
   
   .hot-word-item-content-title {
       font-size: 15px;
-      color: #676766 !important;
+      color: #1e1e1e !important;
       text-decoration-line: none;
-      font-weight: 200 !important;
+      font-weight: 500 !important;
   }
   
   .hot-word-item-content-title:hover {
