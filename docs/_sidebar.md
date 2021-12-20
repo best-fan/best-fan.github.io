@@ -22,6 +22,7 @@
     - [代理模式](javascript/js-mode/js-mode-agent.md)
     - [外观模式](javascript/js-mode/js-mode-facade.md)
     - [桥接模式](javascript/js-mode/js-mode-bridging.md)
+    - [组合模式](javascript/js-mode/js-mode-combination.md)
 
   - 行为型-设计模式
     - [观察者模式](javascript/js-mode/js-mode-observer.md)
