@@ -96,8 +96,8 @@ function appendDom(clasName, dataObj) {
                     <span class='hot-word-item-content-number'>${wordNum}</span>
                 </div>
                 <div class='hot-word-item-status'>
-                <span style="color:${typeTextColor}">${typeText}<span>
-                 </div>
+                    <span style="color:${typeTextColor}">${typeText}<span>
+                </div>
             </div> 
            `
 

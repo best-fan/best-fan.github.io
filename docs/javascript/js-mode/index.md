@@ -40,7 +40,7 @@ SO 体现较多的：Promise
     - [装饰器模式](javascript/js-mode/js-mode-decorator.md)
     - [代理模式](javascript/js-mode/js-mode-agent.md)
     - [外观模式](javascript/js-mode/js-mode-facade.md)
-    - 桥接模式
+    - [桥接模式](javascript/js-mode/js-mode-bridging.md)
     - 组合模式
     - 享元模式
 - 行为型

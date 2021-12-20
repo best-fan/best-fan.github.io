@@ -13,7 +13,6 @@
   - 创建型-设计模式
     - [单例模式](javascript/js-mode/js-mode-singleton.md)
     - [原型模式](javascript/js-mode/js-mode-prototype.md)
-    
     - [简单工厂模式](javascript/js-mode/js-mode-factory.md)
     - [抽象工厂模式](javascript/js-mode/js-mode-abstractFactory.md)
     - [建造者模式](javascript/js-mode/js-mode-builder.md)
@@ -22,6 +21,7 @@
     - [装饰器模式](javascript/js-mode/js-mode-decorator.md)
     - [代理模式](javascript/js-mode/js-mode-agent.md)
     - [外观模式](javascript/js-mode/js-mode-facade.md)
+    - [桥接模式](javascript/js-mode/js-mode-bridging.md)
 
   - 行为型-设计模式
     - [观察者模式](javascript/js-mode/js-mode-observer.md)
