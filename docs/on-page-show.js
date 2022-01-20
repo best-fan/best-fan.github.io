@@ -86,8 +86,8 @@ function appendDom(clasName, dataObj) {
     // 类型颜色
     let typeTextColor = dataObj.icon_desc_color ? dataObj.icon_desc_color : '';
     if (clasName == 'hot-word-toutiao-list' || clasName == 'hot-word-baidu-list') {
-        typeText = typeText == 'hot' ? '热' : typeText == 'new' ? "新" : typeText;
-        typeTextColor = typeText == '热' ? '#ff9406' : typeText == '新' ? '#ff3852' : '';
+        typeText = typeText == 'hot' ? '热' : typeText == 'new' ? "新" : typeText == 'boom' ? "爆" : typeText;
+        typeTextColor = typeText == '热' ? '#ff9406' : typeText == '新' ? '#ff3852' :  typeText == '爆' ? '#bd0000' : '';
     }
     doms = `<div  class='hot-word-item'>
                 <div class='hot-word-item-content'>
@@ -269,5 +269,8 @@ function restTime(str, name) {
 }
 //补零
 function PrefixZero(num, n) {
+    if(num.toString().length>=n){
+        return num;
+    }
     return (Array(n).join(0) + num).slice(-n);
 }
