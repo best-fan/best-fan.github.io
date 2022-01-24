@@ -49,3 +49,4 @@
 - 经验分享
   - [H5 微信授权](share/h5-weChat.md)
   - [web-脱敏方案](share/web-desensitization.md)
+  - [Python-加密视频下载](share/py-download.md)
