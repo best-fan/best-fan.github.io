@@ -186,3 +186,38 @@
       margin-top: 30px;
       font-weight: bold;
   }
+
+  .get-m3u8-ts{
+
+  }
+  .get-m3u8-ts-input {
+    height: 30px;
+    min-width: 310px;
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  .get-m3u8-ts-btn{
+    height: 30px;
+    padding: 0 10px;
+    margin-left: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .get-m3u8-islock{
+    margin-top:30px;
+  }
+  .get-m3u8-ts-list{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    background: #8484842e;
+    padding: 20px;
+    max-height: 400px;
+    overflow: auto;
+  }
+  .get-m3u8-ts-list .item{
+    margin: 5px 0px;
+    color: black;
+    font-size: 13px;
+  }

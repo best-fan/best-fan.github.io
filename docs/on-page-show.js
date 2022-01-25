@@ -1,6 +1,6 @@
 var isAskDoingList = []; //接口正在请求的数组
 // 获取 接口返回数据   "get-one-data" 一个接口
-function getPyData(defultUrl = "get-one-data", isHotWord = false) {
+function getPyData(defultUrl = "get-one-data", defultStr='') {
     if (isAskDoingList.indexOf(defultUrl) != -1) {
         return;
     }
@@ -11,8 +11,19 @@ function getPyData(defultUrl = "get-one-data", isHotWord = false) {
             const resData = res.data.resData;
             if (resData.list) {
                 const oneList = resData.list;
-                if (isHotWord) {
-                    sethotWordPage(defultUrl, oneList, res.data.successTime)
+                switch(defultStr){
+                    case 'setHotWordPage':
+                        sethotWordPage(defultUrl, oneList, res.data.successTime)
+                        break;
+                    case 'setM3U8Page':
+                        console.log(resData)
+                        setM3U8Page(resData)
+                        break;
+                    default:
+                        break;
+                    // 'setHotWordPage'
+                }
+                if (defultStr) {
 
                     return;
                 }
@@ -203,12 +214,18 @@ function onWebUrlChange() {
     }
     // 判断 当前页面是否为每日头条
     if (currentUrl.endsWith('/hotWord')) {
-        getPyData("get-weibo-hot", true);
-        getPyData("get-baidu-hot", true);
-        getPyData("get-toutiao-hot", true);
+        getPyData("get-weibo-hot", 'setHotWordPage');
+        getPyData("get-baidu-hot", 'setHotWordPage');
+        getPyData("get-toutiao-hot", 'setHotWordPage');
         setTimeout(() => {
             hotWordAddLister()
         }, 3000);
+    }
+     //判断 当前页面是否为m3u8 get ts
+     if (currentUrl.endsWith("/m3u8-get-ts")) {
+        // getPyData("get-zh-data");
+        setM3U8PageLinster()
+        console.log('m3u8 get ts')
     }
 }
 //每日头条 监听事件
@@ -218,7 +235,7 @@ function hotWordAddLister() {
         if (isAskDoingList.indexOf('get-weibo-hot') == -1) {
             document.getElementsByClassName('hot-word-weibo-list')[0].innerHTML = 'Loading'
             setTimeout(() => {
-                getPyData("get-weibo-hot", true);
+                getPyData("get-weibo-hot", 'setHotWordPage');
 
             }, 800);
         }
@@ -227,7 +244,7 @@ function hotWordAddLister() {
         if (isAskDoingList.indexOf('get-baidu-hot') == -1) {
             document.getElementsByClassName('hot-word-baidu-list')[0].innerHTML = 'Loading'
             setTimeout(() => {
-                getPyData("get-baidu-hot", true);
+                getPyData("get-baidu-hot", 'setHotWordPage');
 
             }, 800);
         }
@@ -236,7 +253,7 @@ function hotWordAddLister() {
         if (isAskDoingList.indexOf('get-toutiao-hot') == -1) {
             document.getElementsByClassName('hot-word-toutiao-list')[0].innerHTML = 'Loading'
             setTimeout(() => {
-                getPyData("get-toutiao-hot", true);
+                getPyData("get-toutiao-hot", 'setHotWordPage');
 
             }, 800);
         }
@@ -273,4 +290,35 @@ function PrefixZero(num, n) {
         return num;
     }
     return (Array(n).join(0) + num).slice(-n);
+}
+// 监听  m3u8 获取 TS 文件 页面
+function setM3U8PageLinster(){
+    console.log( document.getElementsByClassName('get-m3u8-ts-btn')[0]);
+    
+    document.getElementsByClassName('get-m3u8-ts-btn')[0].addEventListener('click', function() {
+        
+        let values=document.getElementsByClassName('get-m3u8-ts-input')[0].value;
+        if(values.endsWith('.m3u8')){
+            getPyData('get-ts-url?urls='+values,'setM3U8Page')
+        }else{
+            document.getElementsByClassName('get-m3u8-islock')[0].innerHTML='';
+            document.getElementsByClassName('get-m3u8-ts-list')[0].innerHTML='';
+            alert('m3u8地址有误')
+        }
+        console.log('aaaaaaaa',values);
+        
+    })
+}
+// 设置  m3u8 获取 TS 文件 页面
+function setM3U8Page(data){
+    let {list,isEncryption }=data;
+    if(list.length>0){
+        document.getElementsByClassName('get-m3u8-islock')[0].innerHTML=`视频是否加密：${isEncryption?'是':'否'} 共计：${list.length}`
+        let itmStr=''
+        list.forEach(item=>{
+            itmStr+='<div class="item">'+item+'</div>'
+        })
+        document.getElementsByClassName('get-m3u8-ts-list')[0].innerHTML=itmStr
+    
+    }
 }
