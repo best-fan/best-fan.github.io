@@ -9,6 +9,8 @@
   - [vue2.x 源码学习-Virtual DOM](vue/2.x-7.md)
 - Vue3
   - [vue3 API风格对比](learn-vue3/start.md)
+  - [vue3 响应式](learn-vue3/reactive.md)
+
 - JavaScript
   - [设计模式-开篇](javascript/js-mode/index.md)
   - 创建型-设计模式
