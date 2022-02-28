@@ -7,8 +7,9 @@
   - [vue2.x 源码学习-数据驱动](vue/2.x-5.md)
   - [vue2.x 源码学习-render](vue/2.x-6.md)
   - [vue2.x 源码学习-Virtual DOM](vue/2.x-7.md)
+- Vue3
+  - [vue3 API风格对比](learn-vue3/start.md)
 - JavaScript
-
   - [设计模式-开篇](javascript/js-mode/index.md)
   - 创建型-设计模式
     - [单例模式](javascript/js-mode/js-mode-singleton.md)
