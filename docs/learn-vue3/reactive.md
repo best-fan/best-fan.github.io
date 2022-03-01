@@ -121,3 +121,104 @@
   - `ref()`定义响应式变量
   
     为了解决`reactive()`带来的限制，`ref()`方法用来创建响应式的 **ref**，可以装载**任何值类型**。
+  ```js
+    <script setup>
+  import {reactive, ref ,shallowReactive} from 'vue';
+  //ref()定义响应式变量
+  // reactive()创建一个响应式对象或数组
+  const count= ref(0)
+  console.log(count)
+  //ref() 从参数中获取到值，将其包装为一个带 .value 属性的对象
+  console.log(count.value)
+  count.value++;
+  console.log(count.value);
+  // 可以响应式地替换整个对象
+  const objRef=ref({mm:1});
+  objRef.value={mm:3}
+
+  //ref 被传递给函数或是从一般对象上被解构时，不会丢失响应性
+  const obj = {
+    foo: ref(1),
+    bar: ref(2)
+  }
+  // 该函数接收一个 ref
+  // 需要通过 .value 取值
+  // 但它会保持响应性
+  // callSomeFunction(obj.foo)
+
+  // 仍然是响应式的
+  const { foo, bar } = obj
+  foo.value=2;
+  console.log('foo',foo.value);
+  console.log('obj',obj.foo);
+
+
+  // ref 在模板中的解包
+  //1、 顶层 property
+  const counts=ref(0)
+  function add(){
+      counts.value++
+  }
+  //2、深层级的 ref 
+  const objs={fot:ref(0)}
+  // 通过解构 成为顶层 property 
+  const {fot}=objs
+  function setM(){
+      fot.value++;
+    
+  }
+
+  // ref 在响应式对象中的解包( 省去了 value)
+  const mm=ref(0)
+
+  const dd=reactive({mm})
+  console.log(dd.mm)//0
+  dd.mm++;
+  console.log(dd.mm)//1
+  console.log(mm.value)//1
+  // 将一个新的 ref 赋值给响应式对象(reactive)中已存在的 ref 的属性，
+  // 会替换掉旧的 ref
+  const nn= ref(5)
+  dd.mm=nn;
+  console.log(dd.mm);//5
+  console.log(mm.value)//1
+  console.log('浅层响应式对象')
+
+  // 浅层响应式对象  不会进行解包  需要访问.value 获取值
+  const dd1=shallowReactive({mm})
+  console.log(dd1.mm.value)//1
+  dd1.mm.value++;
+  console.log(dd1.mm.value)//2
+  console.log(mm.value)//2
+
+  // 数组或 Map 这样的原生集合类型访问 ref 时，也不会进行解包
+  const books = reactive([ref('Vue 3 Guide')])
+  // 这里需要 .value
+  console.log(books[0].value)
+
+  const map = reactive(new Map([['count', ref(0)]]))
+  // 这里需要 .value
+  console.log(map.get('count').value)
+
+
+
+  // 响应性语法糖 （实验性阶段）
+  // 开启方式：https://staging-cn.vuejs.org/guide/extras/reactivity-transform.html
+
+  let  myCount=$ref(0)
+  function myAdd(){
+      myCount++;
+  }
+
+  </script>
+  <template>
+      <h1 @click="add">ref</h1>
+      <!-- 可以不用写counts.value -->
+      <div>{{counts}}</div>
+      <h1 @click="setM">objSet</h1>
+      <!-- 自动解包 -->
+      <div>{{fot}}</div>
+      <h1 @click="myAdd()"> $ref</h1>
+      <div>{{myCount}}</div>
+  </template>
+  ```
